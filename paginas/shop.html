@@ -14,7 +14,7 @@
                 </a>    
             </picture>
             <ul>
-                <<li>
+                <li>
                     <a href="./shop.html">SHOP</a>
                 </li>
                 <li>
@@ -32,7 +32,40 @@
         </nav>
     </header>
     <aside>
-        <!--FORMULARIO DE BÚSQUEDA-->
+        <h2>BUSCAR</h2>
+        <form action="/ruta-del-servidor-de-busqueda" method="GET">
+            <input type="text" id="busqueda" name="q" placeholder="item o categoría" required>
+            <button type="submit">Buscar</button>
+        </form>
+        <h2>ORDENAR POR</h2>
+        <form>
+            <select>
+                <option>Precio Mayor a Menor</option>
+                <option>Precio Menor a Mayor</option>
+                <option>Alfabéticamente A-Z</option>
+                <option>Alfabéticamnete Z-A</option>
+            </select>
+            <input type="submit" value="Ordenar">
+        </form>
+        <h2>PRECIO</h2>
+        <form>
+            <label for="minimo">MÍN</label>
+            <input type="number" id="minimo" name="minimo" required>
+    
+            <label for="maximo">MÁX</label>
+            <input type="number" id="maximo" name="maximo" required>
+    
+            <input type="submit" value="Seleccionar">
+        </form>
+        <h2>FILTRAR</h2>
+        <form action="/ruta-de-procesamiento" method="GET">
+            <label for="categoria"></label>
+            <input type="radio" name="categoria" value="nuevos">NUEVOS<br>
+            <input type="radio" name="categoria" value="ofertas">OFERTAS<br>
+            <input type="radio" name="categoria" value="edicionespecial">EDICIÓN ESPECIAL<br>
+            <input type="radio" name="categoria" value="favoritos">FAVORITOS<br>
+            <input type="submit" value="Aplicar Filtros">
+        </form>
     </aside>
     <main>
          <section>
