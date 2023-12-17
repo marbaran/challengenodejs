@@ -44,7 +44,20 @@
         </nav>
     </header>
     <main>
-    /* FORMULARIO CONTACTO */    
+        <form name="contacto" form action="./IMAGENES/show_data.html"onsubmit="return validarcontacto()" method="post"> 
+            <label for="nombre">NOMBRE</label>
+            <input type="text" name="nombre" id="nombre"><br>
+            <br>
+            <label for="apellido">APELLIDO</label>
+            <input type="text" name="apellido" id="apellido"><br>
+            <br>
+            <label for="nombre">email:</label>
+            <input type="email" name="email" id="email"><br>
+            <br>
+            <textarea name="texto" id="mensaje" cols="40" rows="12" placeholder="Escriba su mensaje aqui..."></textarea>
+            <br>
+            <input type="submit" value="ENVIAR" id="enviarmen">
+        </form>        
     </main>
     <footer class="footer">
         <section>

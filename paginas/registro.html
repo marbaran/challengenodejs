@@ -44,7 +44,27 @@
         </nav>
     </header>
     <main>
-    /* FORMULARIO REGISTRO */    
+        <form action="procesar_registro.php" method="post">
+            <h2>CREA TU CUENTA</h2>
+            <br>
+            <h3>Completa el formulario para ser parte del mundo de los Funkos</h3>
+            <label for="nombre">NOMBRE:</label>
+            <input type="text" id="nombre" name="nombre" required>
+            <br>
+            <label for="apellido">APELLIDO:</label>
+            <input type="text" id="apellido" name="apellido" required>
+            <br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <br>
+            <label for="contrasena">Contraseña:</label>
+            <input type="password" id="contrasena" name="contrasena" required>
+            <br>
+            <label for="repetircontrasena">Repita Contraseña:</label>
+            <input type="password" id="repetircontrasena" name="repetircontrasena" required>
+            <br>
+            <button type="submit">Registrar</button>
+          </form> 
     </main>
     <footer class="footer">
         <section>
