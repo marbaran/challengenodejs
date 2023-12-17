@@ -3,28 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/estilo.css">
     <title>ADMIN FUNKOSHOP</title>
 </head>
 <body>
     <header>
-        <nav>
-            <picture>
+        <nav class="navbar container">
+            <picture class="navbar__logo">
                 <a href="../index.html">
                     <img src="../imagenes/branding/logo_light_horizontal.svg" alt="Logotipo de Funkoshop">
                 </a>    
             </picture>
-            <ul>
-                <li>
-                    <a href="./shop.html">SHOP</a>
+            <ul class="navbar__menu">
+                <li class="navbar__item with-submenu ">
+                    <a class="navbar__link with-icon" href="../paginas/shop.html">SHOP <iconify-icon icon="tabler:chevron-down"></iconify-icon></a>
+                    <ul class="submenu">
+                        <li class="submenu__item">
+                            <a href="" class="submenu__link">Funkos</a>
+                        </li>
+                        <li class="submenu__item">
+                            <a href="" class="submenu__link">Remeras</a>
+                        </li>
+                        <li class="submenu__item">
+                            <a href="" class="submenu__link">Llaveros</a>
+                        </li>
+                    </ul>
                 </li>
-                <li>
-                    <a href="./contacto.html">CONTACTO</a>
+                <li class="navbar__item">
+                    <a class="navbar__link" href="../paginas/contacto.html">CONTACTO</a>
                 </li>
-                <li>
-                    <a href="./login.html">LOGIN</a>
+                <li class="navbar__item">
+                    <a class="navbar__link" href="../paginas/login.html">LOGIN</a>
                 </li>
-                <li>
-                    <a href="./carrito.html">
+                <li class="navbar__item">
+                    <a class="navbar__carrito" href="../paginas/carrito.html">
                         <img src="../imagenes/icons/cart-icon.svg" alt="Icono de carrito">
                     </a>
                 </li>
@@ -56,21 +68,21 @@
         <p>12 HPT001003 Luna Lovegood Lion Mask HARRY POTTER</p>
         <p>13 HPT001004 Snape Patronus HARRY POTTER</p>
     </main>
-    <footer>
+    <footer class="footer">
         <section>
-            <nav>
+            <nav class="navbar container">
                 <ul>
-                    <li>
-                        <a href="./shop.html">SHOP</a>
+                    <li class="navbar__item">
+                        <a class="navbar__link" href="../paginas/shop.html">SHOP</a>
                     </li>
-                    <li>
-                        <a href="./registro.html">REGISTRARSE</a>
+                    <li class="navbar__item">
+                        <a class="navbar__link" href="../paginas/registro.html">REGISTRARSE</a>
                     </li>    
-                    <li>
-                        <a href="./login.html">LOGIN</a>
+                    <li class="navbar__item">
+                        <a class="navbar__link"a href="../paginas/login.html">LOGIN</a>
                     </li>
-                    <li>
-                        <a href="./contacto.html">CONTACTO</a>
+                    <li class="navbar__item">
+                        <a class="navbar__link" href="../paginas/contacto.html">CONTACTO</a>
                     </li>
                 </ul>
                 <picture>
@@ -78,7 +90,8 @@
                 </picture>
             </nav>
         </section>
-        <p>TODOS LOS DERECHOS RESERVADOS 2023 - Funkoshop &copy;</p>
+        <p class="footer__copy">TODOS LOS DERECHOS RESERVADOS 2023 - Marcelo Baranowski - Funkoshop &copy;</p>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.8/dist/iconify-icon.min.js"></script>
 </body>
 </html>
