@@ -43,40 +43,31 @@
             </ul>
         </nav>
     </header>
-    <main id="admin" class="container">
-        <section class="admin__search">
-            <iconify-icon class="admin__icon" icon="charm:search"></iconify-icon>
-            <input class="admin__search-bar" type="text" name="search" id="search" placeholder="código, nombre o categoria">
-        </section>
-        <section class="admin__list">
-            <div class="admin__header">
-                <h2>LISTADO DE PRODUCTOS</h2>
-                <span>AGREGAR<a href="/admin/create"><iconify-icon icon="bxs:plus-square" style="color: #f33;"></iconify-icon></a></span>
-            </div>
-            <div class="admin-table">
-                <header class="admin-table__header">
-                    <h3>ID</h3>
-                    <h3>Código</h3>
-                    <h3>Nombre del Producto</h3>
-                    <h3>Categoría</h3>
-                </header>
-                <% items.forEach(item => { %>
-                  <article class="admin-table__row">
-                      <p><%= item.product_id %></p>
-                      <p><%= item.sku %></p>
-                      <p><%= item.product_name %></p>
-                      <p><%= item.category_name %></p>
-                      <a href="/admin/edit/<%= item.product_id %>"><iconify-icon icon="mdi:pencil" style="color: #1d84b5;"></iconify-icon></a>
-                      <form action="/admin/delete/<%= item.product_id %>?_method=DELETE" method="POST">
-                          <button class="admin-table__btn-delete" type="submit">
-                              <iconify-icon icon="heroicons-solid:trash" style="color: #f33;"></iconify-icon>
-                          </button>
-                      </form>
-                  </article>
-                <% }); %>
-            </div>
-        </section>
-      </main>
+    <main>
+        <!--BÚSQUEDA-->
+        <form action="/ruta-del-servidor-de-busqueda" method="GET">
+            <input type="text" id="busqueda" name="q" placeholder="código, nombre o categoría" required>
+            <button type="submit">Buscar</button>
+        </form>
+        <h1>LISTADO DE PRODUCTOS</h1> <!--AGREGAR-->
+        <div>
+            <a href="crear.html" class="nuevo">NUEVO</a> 
+        </div>
+        <h2>ID CÓDIGO NOMBRE DEL PRODUCTO CATEGORÍA</h2> <!--EDITAR ELIMINAR-->
+        <p>1 STW001001 Baby Yoda Blueball STAR WARS</p>
+        <p>2 STW001002 Boba Fett Fighter STAR WARS</p>
+        <p>3 STW001003 Luke Skywalker & Grogu STAR WARS</p>
+        <p>4 STW001004 Stormtrooper Lightsaber STAR WARS</p>
+        <p>5 PKM001001 Charmander Smiley POKEMON</p>
+        <p>6 PKM001002 Dragonite Hil POKEMON</p>
+        <p>7 PKM001003 Pidgeotto Flying POKEMON</p>
+        <p>8 PKM001004 Pikachu Smiley POKEMON</p>
+        <p>9 PKM001005 Vulpix Fancy POKEMON</p>
+        <p>10 HPT001001 Harry Potter & Hegwid HARRY POTTER</p>
+        <p>11 HPT001002 Hermione Ball Dress HARRY POTTER</p>
+        <p>12 HPT001003 Luna Lovegood Lion Mask HARRY POTTER</p>
+        <p>13 HPT001004 Snape Patronus HARRY POTTER</p>
+    </main>
     <footer class="footer">
         <section>
             <nav class="navbar container">
