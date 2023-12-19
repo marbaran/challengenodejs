@@ -1,10 +1,12 @@
 const express = require('express');
 const router = express.Router;
 
-router.get('/login', (rep, req) => res.send('Esta es la vista de LOGIN'));
-router.post('/login', (rep, req) => res.send('Esta es la ruta que valida los datos de LOGIN'));
-router.get('/register', (rep, req) => res.send('Esta es la vista de REGISTER'));
-router.post('/register', (rep, req) => res.send('Esta es la ruta que crea un nuevo usuario'));
-router.post('/logout', (rep, req) => res.send('Esta es la ruta que cierra la sesión del usuario'));
+const controller = require('../controllers/authController');
+
+router.get('/login', controller.login);
+router.post('/login', controller.valDatLogin);
+router.get('/register', controller.register);
+router.post('/register', controller.createNewUser);
+router.post('/logout', controller.closeSesUser);
 
 module.exports = router;
